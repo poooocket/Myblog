@@ -1,6 +1,6 @@
 // src/lib/utils.js
 export async function fetchProjects() {
-    const allProjectFiles = import.meta.glob('$lib/projects/*.md');
+    const allProjectFiles = import.meta.glob('$lib/projects/*.md?raw');
     const iterableProjectFiles = Object.entries(allProjectFiles);
 
     const allProjects = await Promise.all(
