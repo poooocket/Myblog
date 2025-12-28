@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-netlify';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from 'mdsvex';
 
@@ -22,4 +22,8 @@ const config = {
 	}
 };
 
-export default config;
+export default {
+  kit: {
+    adapter: adapter()
+  }
+};
