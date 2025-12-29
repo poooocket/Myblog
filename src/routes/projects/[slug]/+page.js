@@ -3,7 +3,7 @@ import { error } from '@sveltejs/kit';
 export async function load({ params }) {
     try {
         // 自动匹配 lib/projects 下的 md 文件
-        const post = await import(`$lib/projects/${params.slug}.md?raw`);
+        const post = await import(`$lib/projects/${params.slug}.md`);
         
         return {
             content: post.default,

@@ -1,33 +1,27 @@
-// // src/lib/utils.js
-// export async function fetchProjects() {
-//     const allProjectFiles = import.meta.glob('$lib/projects/*.md?raw');
-//     const iterableProjectFiles = Object.entries(allProjectFiles);
-
-//     const allProjects = await Promise.all(
-//         iterableProjectFiles.map(async ([path, resolver]) => {
-//             const { metadata } = await resolver();
-//             const slug = path.split('/').pop().slice(0, -3); // 去掉 .md
-//             return { ...metadata, slug };
-//         })
-//     );
-
-//     return allProjects;
-// }
-
-
+// src/lib/utils.js
 export async function fetchProjects() {
-    // 移除 ?raw，直接读取模块
-    const allProjectFiles = import.meta.glob('$lib/projects/*.md', { eager: true });
-    
-    const allProjects = Object.entries(allProjectFiles).map(([path, module]) => {
-        const slug = path.split('/').pop().slice(0, -3);
-        // mdsvex 会把 --- 里的内容放在 metadata 属性中
-        return { 
-            ...module.metadata, 
-            slug 
-        };
-    });
+  // 1. 去掉 ?raw，改用相对路径
+  const modules = import.meta.glob('../lib/projects/*.md');
 
-    // 可以在这里加一个过滤，确保只有带标题的才返回
-    return allProjects.filter(project => project.title);
+  const projects = await Promise.all(
+    Object.entries(modules).map(async ([path, resolver]) => {
+      // 2. resolver() 现在返回的是一个包含 metadata 的 Svelte 组件模块
+      const mod = await resolver();
+
+      // 获取文件名作为 slug
+      const slug = path.split('/').pop().replace('.md', '');
+
+      // 3. mdsvex 会将 frontmatter 放在 metadata 属性中
+      if (mod && typeof mod === 'object' && 'metadata' in mod) {
+        return {
+          ...mod.metadata,
+          slug
+        };
+      }
+      return { slug }; // 回退方案
+    })
+  );
+
+  // 可选：按日期排序
+  return projects.sort((a, b) => new Date(b.date) - new Date(a.date));
 }

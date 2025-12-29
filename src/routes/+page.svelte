@@ -1,3 +1,5 @@
+
+
 <script>
   import { fly } from 'svelte/transition';
   import { cubicOut } from 'svelte/easing';
@@ -12,7 +14,7 @@
   <header in:fly={{ y: 20, duration: 1000 }}>
     <h1>
       Hi，我是蔡克梅<br/>
-      一名热爱数据和AI的产品设计师
+      一名热爱创新的产品设计师
     </h1>
 
   </header>
