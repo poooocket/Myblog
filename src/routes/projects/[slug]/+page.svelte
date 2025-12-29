@@ -40,7 +40,6 @@
     }
 
     /* 针对所有标题的细体覆盖 */
-    .prose :global(h1),
     .prose :global(h2),
     .prose :global(h3),
     .prose :global(h4),
@@ -51,20 +50,10 @@
 
     .prose :global(h2) {
         font-size: 2.5rem;
-        margin-top: 4rem;
-        margin-bottom: 1.5rem;
     }
 
     .prose :global(h3) {
         font-size: 1.5rem;
-        margin-top: 3rem;
-        margin-bottom: 1rem;
-    }
-
-    /* 即使是加粗文本，在细体风格下也可以设为 400 (Regular) 而不是默认的 700 */
-    .prose :global(strong) {
-        font-weight: 400;
-        color: #000;
     }
 
     @media (max-width: 768px) {
@@ -73,12 +62,12 @@
         }
 
         .prose :global(h2) {
-            font-size: 1.8rem; /* 手机端 2.5rem 太大了，会导致长单词断行 */
+            font-size: 1.5rem; /* 手机端 2.5rem 太大了，会导致长单词断行 */
             margin-top: 2.5rem;
         }
 
         .prose :global(h3) {
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             margin-top: 2rem;
         }
 

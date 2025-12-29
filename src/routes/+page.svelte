@@ -1,5 +1,4 @@
 
-
 <script>
   import { fly } from 'svelte/transition';
   import { cubicOut } from 'svelte/easing';
@@ -61,9 +60,25 @@
     font-weight: 300;
     font-size: 4rem;
     letter-spacing: -0.02em;
-    margin-bottom: 10rem;
-
+    margin-bottom: 6rem;
   }
+
+  h2 { 
+    font-weight: 300;  
+    font-size: 2.5rem; 
+    letter-spacing: 0.01em; 
+    margin-bottom: 1rem;
+  }
+
+  .category { 
+    font-weight: 300;
+    font-size: 1rem; 
+    margin-top: 0.4rem; 
+    letter-spacing: 0.05em;
+    display: block;
+    text-transform: uppercase; /* 可选：全大写增加高级感 */
+  }
+
 
   .project-row { 
     display: flex; 
@@ -76,7 +91,7 @@
     transition: opacity 0.3s;
     overflow: hidden;
     flex-direction: row;
-    margin-top: 4rem;
+    margin-top: 8rem;
   }
 
   .project-row:nth-child(even) {
@@ -117,23 +132,7 @@
   
   }
 
-  h2 { 
-    font-weight: 300;     /* 关键：细体 */
-    font-size: 2.5rem; 
-    margin-bottom: 1rem;
-    letter-spacing: 0.01em; 
-  }
-
-  .category { 
-    color: #333; 
-    font-size: 1rem; 
-    font-weight: 300;    /* 关键：细体 */
-    margin-top: 0.4rem; 
-    display: block;
-    letter-spacing: 0.05em;
-    text-transform: uppercase; /* 可选：全大写增加高级感 */
-  }
-
+  
 
   /* 移动端适配 */
   @media (max-width: 768px) {
@@ -141,11 +140,7 @@
       flex-direction: column; 
       align-items: flex-start; 
       gap: 1rem; 
-    }
-
-    .title-group, .project-row:nth-child(even) .title-group { 
-      padding: 3rem 2rem; 
-      text-align: left; /* 手机端统一左对齐，方便阅读 */
+      margin-top: 1rem;
     }
     
     .image-preview { 
@@ -154,5 +149,8 @@
     h1 { 
       font-size: 2rem; 
     }
+    h2 {
+        font-size: 1.5rem; 
+        }
   }
 </style>
