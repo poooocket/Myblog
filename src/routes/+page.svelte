@@ -67,7 +67,7 @@
   .project-row { 
     display: flex; 
     align-items: stretch; /* 垂直居中 */
-    gap: 2rem;           /* 间距 */
+    gap: 8rem;           /* 间距 */
     padding: 2.5rem 0; 
     /* border-bottom: 1px solid #eee;  */
     text-decoration: none; 
