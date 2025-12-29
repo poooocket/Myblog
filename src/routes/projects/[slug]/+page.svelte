@@ -10,9 +10,19 @@
 </article>
 
 <style>
+    .project-container {
+        width: 100%;
+        /* 确保背景色或其他布局不会溢出 */
+    }
+
     .prose {
         max-width: 800px;
         margin: 0 auto;
+        padding: 0 1.5rem;
+        box-sizing: border-box;
+        font-weight: 300;
+        line-height: 1.6;
+        color: #333;
     }
     /* 统一设置 Markdown 里的图片和标题样式 */
     .prose :global(img) {
@@ -57,5 +67,26 @@
         color: #000;
     }
 
+    @media (max-width: 768px) {
+        .prose {
+            padding: 0 1.5rem; /* 手机端间距稍微收紧一点点，给文字更多空间 */
+        }
+
+        .prose :global(h2) {
+            font-size: 1.8rem; /* 手机端 2.5rem 太大了，会导致长单词断行 */
+            margin-top: 2.5rem;
+        }
+
+        .prose :global(h3) {
+            font-size: 1.3rem;
+            margin-top: 2rem;
+        }
+
+        /* 手机端图片通常不需要圆角，或者小一点更硬朗 */
+        .prose :global(img) {
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+    }
     
 </style>
