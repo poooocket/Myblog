@@ -13,8 +13,8 @@
 <div class="container">
   <header in:fly={{ y: 20, duration: 1000 }}>
     <h1>
-      Hi，我是蔡克梅<br/>
-      一名热爱创新的产品设计师
+      Hi，我是蔡克梅，<br/>
+      一名热爱创新的产品设计师。
     </h1>
 
   </header>
@@ -58,7 +58,7 @@
   
   h1 {
     font-weight: 300;
-    font-size: 2.5rem;
+    font-size: 4rem;
     letter-spacing: -0.02em;
     margin-bottom: 3rem;
 
@@ -93,6 +93,7 @@
     aspect-ratio: 16 / 9; /* 保持固定比例 */
     overflow: hidden;
     background: #f5f5f5;
+    border-radius: 24px;
   }
 
   .image-preview img {
@@ -116,8 +117,8 @@
 
   h2 { 
     font-weight: 300;     /* 关键：细体 */
-    font-size: 2rem; 
-    margin: 0;
+    font-size: 2.5rem; 
+    margin-bottom: 1rem;
     letter-spacing: 0.01em; 
   }
 

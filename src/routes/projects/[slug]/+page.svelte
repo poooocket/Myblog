@@ -25,7 +25,7 @@
     .prose {
         /* 使用 300 (Light) 或 200 (Extra Light) */
         font-weight: 300; 
-        line-height: 1.8;
+        line-height: 1.4;
         color: #333;
     }
 
@@ -40,7 +40,7 @@
     }
 
     .prose :global(h2) {
-        font-size: 2rem;
+        font-size: 2.5rem;
         margin-top: 4rem;
         margin-bottom: 1.5rem;
     }
