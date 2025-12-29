@@ -54,13 +54,14 @@
   .container { 
     max-width: 1200px; 
     margin: 0 auto; 
-    padding: 6rem 2rem; }
+    padding: 6rem 2rem; 
+  }
   
   h1 {
     font-weight: 300;
     font-size: 4rem;
     letter-spacing: -0.02em;
-    margin-bottom: 3rem;
+    margin-bottom: 10rem;
 
   }
 
@@ -75,6 +76,7 @@
     transition: opacity 0.3s;
     overflow: hidden;
     flex-direction: row;
+    margin-top: 4rem;
   }
 
   .project-row:nth-child(even) {
