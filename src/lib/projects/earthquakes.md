@@ -8,7 +8,7 @@ color: "#4F46E5"
 
 
 <script>
-  import SideBySide from '$lib/components/SideBySide.svelte';
+  import SideBySide from '$lib/components/SidebySide.svelte';
 </script>
 
 ## 地球脉动是一套基于三维球体场景的地震可视化系统，帮助用户快速理解地震的空间分布、聚集规律及时间节奏。

@@ -8,7 +8,7 @@ color: "#4F46E5"
 
 
 <script>
-  import SideBySide from '$lib/components/SideBySide.svelte';
+  import SideBySide from '$lib/components/SidebySide.svelte';
 </script>
 
 ## OTA 远程升级是车企的软件化核心能力，直接影响产品迭代效率、系统稳定性与车主体验。我负责 OTA 平台端的产品与体验设计，构建支撑多角色、多任务协同的升级全流程体验。
