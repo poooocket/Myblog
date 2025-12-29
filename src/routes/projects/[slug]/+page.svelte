@@ -18,7 +18,7 @@
     .prose {
         max-width: 800px;
         margin: 0 auto;
-        padding: 0 1.5rem;
+        padding: 0 2rem;
         box-sizing: border-box;
         font-weight: 300;
         line-height: 1.6;
@@ -58,7 +58,7 @@
 
     @media (max-width: 768px) {
         .prose {
-            padding: 0 1.5rem; /* 手机端间距稍微收紧一点点，给文字更多空间 */
+            padding: 0 2rem; /* 手机端间距稍微收紧一点点，给文字更多空间 */
         }
 
         .prose :global(h2) {
