@@ -99,10 +99,6 @@
   }
 
 
-  .project-row:hover {
-    opacity: 0.7;
-  }
-
   /* 2. 新增：图片样式控制 */
   .image-preview {
     flex: 1;
