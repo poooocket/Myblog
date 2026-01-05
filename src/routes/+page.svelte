@@ -57,14 +57,14 @@
   }
   
   h1 {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 4rem;
     letter-spacing: -0.02em;
     margin-bottom: 6rem;
   }
 
   h2 { 
-    font-weight: 300;  
+    font-weight: 400;  
     font-size: 2.5rem; 
     letter-spacing: 0.01em; 
     margin-bottom: 1rem;

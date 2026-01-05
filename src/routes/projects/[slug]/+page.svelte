@@ -44,7 +44,7 @@
     .prose :global(h3),
     .prose :global(h4),
     .prose :global(strong) {
-        font-weight: 300; 
+        font-weight: 400; 
         letter-spacing: -0.04em; 
     }
 
