@@ -1,7 +1,7 @@
 ---
 title: "智能车配置趋势分析工具"
 category: "通过自动化采集行业竞品车型数据，结合智能分析模型，动态洞察智能配置的发展趋势，助力产品规划和战略决策。"
-year: "2023"
+year: "2021"
 image: "/images/projects/config_analysis/0.png"
 color: "#4F46E5"
 ---
